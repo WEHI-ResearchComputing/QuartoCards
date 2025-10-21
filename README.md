@@ -17,7 +17,7 @@ If you're using version control, you will want to check in this directory.
 At the simplest, just use the `url-card` shortcode, followed by a URL:
 
 ```
-{{< url-card https://github.com/quarto-dev/quarto-cli }}
+{{< url-card https://github.com/quarto-dev/quarto-cli >}}
 ```
 
 This will result in something like this appearing when you render your Quarto:
