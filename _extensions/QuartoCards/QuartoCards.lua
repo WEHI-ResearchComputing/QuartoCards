@@ -8,7 +8,7 @@ function meta_table(document)
 end
 
 return {
-  ['opengraphcards'] = function(args, kwargs, meta, raw_args, context)
+  ['url-card'] = function(args, kwargs, meta, raw_args, context)
     local url = args[1]
     local mime, contents = pandoc.mediabag.fetch(url)
     local parsed = pandoc.read(contents, "html")
@@ -33,7 +33,11 @@ return {
     card_div.content:insert(card_body)
 
     if show_title and title then
-      local title_element = pandoc.Para({pandoc.Span(title, pandoc.Attr("", {"card-title", "h5"}, {}))})
+      local title_element = pandoc.Header(
+        5,
+        title,
+        pandoc.Attr("", {"card-title", "h5"}, {})
+      )
       card_body.content:insert(title_element)
     end
 

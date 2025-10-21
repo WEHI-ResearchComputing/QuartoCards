@@ -2,6 +2,8 @@
 title: "OpenGraphCards Example"
 ---
 
-{{< opengraphcards https://github.com/quarto-dev/quarto-cli show_description=false >}}
+{{< url-card https://github.com/quarto-dev/quarto-cli show_description=false >}}
 
-{{< opengraphcards https://quarto.org/ >}}
+# Heading
+
+{{< url-card https://quarto.org/ >}}
