@@ -1,6 +1,6 @@
 # QuartoCards Extension For Quarto
 
-Generate cards for displaying URLs in your quarto presentations.
+Generate cards for displaying URLs in your Quarto presentations.
 These are a bit like the preview cards you get when you post a link to Twitter, Discord, Reddit etc.
 
 ## Installing
@@ -22,7 +22,7 @@ At the simplest, just use the `url-card` shortcode, followed by a URL:
 
 This will result in something like this appearing when you render your Quarto:
 
-![](quarto.png){max}
+![](quarto.png)
 
 ## Formats
 
