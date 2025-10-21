@@ -1,0 +1,7 @@
+---
+title: "OpenGraphCards Example"
+---
+
+{{< opengraphcards https://github.com/quarto-dev/quarto-cli show_description=false >}}
+
+{{< opengraphcards https://quarto.org/ >}}
