@@ -29,20 +29,21 @@ return {
       card_div.content:insert(img)
     end
 
-    local card_body = pandoc.Div({}, pandoc.Attr("", {"card-body"}, {}))
+    local card_body = pandoc.Div({}, pandoc.Attr("", {"card-body"}))
     card_div.content:insert(card_body)
 
     if show_title and title then
       local title_element = pandoc.Header(
         5,
-        title,
-        pandoc.Attr("", {"card-title", "h5"}, {})
+        pandoc.Span(title, pandoc.Attr("", {"card-title"}))
       )
       card_body.content:insert(title_element)
     end
 
     if show_description and description then
-      local desc_element = pandoc.Para({pandoc.Span(description, pandoc.Attr("", {"card-text"}, {}))})
+      local desc_element = pandoc.Para({
+        pandoc.Span(description, pandoc.Attr("", {"card-text"}))
+      })
       card_body.content:insert(desc_element)
     end
 
